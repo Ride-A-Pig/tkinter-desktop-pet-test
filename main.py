@@ -1,5 +1,4 @@
 from cmath import sqrt
-from pydoc import cli
 from PIL import Image, ImageTk
 import tkinter as tk
 import pyautogui as pt
@@ -19,8 +18,7 @@ root.wm_attributes('-topmost', 1)
 root.wm_attributes('-fullscreen', 1)
 
 # Read image and resize
-img = Image.open(".\YellowBean.png").resize(size=(100, 100))
-img = ImageTk.PhotoImage(img)
+img = ImageTk.PhotoImage(Image.open(".\YellowBean.png").resize(size=(100, 100)))
 
 # Create button 1 and place it in the center of the screen
 pX, pY = WIDTH/2-50, HEIGHT/2-50
@@ -95,7 +93,7 @@ def movePos(button):
 
 
 # Main
-movePos(button=button1)
 setPos()
+movePos(button=button1)
 
 root.mainloop()
