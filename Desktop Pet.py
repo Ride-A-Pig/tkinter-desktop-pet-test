@@ -103,5 +103,5 @@ def Anim(num, rate, character): # Make animations work.
 changeStatus()
 falling()
 moving()
-Anim(0, 200, player)
+Anim(0, 150, player)
 root.mainloop()
